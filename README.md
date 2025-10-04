@@ -12,12 +12,6 @@ bundle install
 
 ## Running all Tests
 
-Run all tests:
-
-```bash
-bundle exec rspec
-```
-
 Run all tests with code coverage:
 
 ```bash
