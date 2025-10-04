@@ -45,7 +45,11 @@ class StringCalculator
 
     # Splitting the numbers in an array and converting to integers
     number_array = numbers.split(@delimiter).map(&:to_i)
-    
+
+    # Filtering out the negative numbers
+    negative_numbers = number_array.select { |n| n < 0 }
+    raise "negative numbers not allowed #{negative_numbers.join(", ")}" if negative_numbers.any?
+
     # Summing the numbers and returning the total sum
     number_array.select { |n| n }.sum
   end
@@ -64,7 +68,19 @@ input_list = [
   "//[*][%]\n1*2%3"  # custom multi-character delimiter
 ]
 
+# Negative numbers
+negative_input_list = [
+  "1,-2,3",
+  "1,-2,-3,4"
+]
+input_list.concat(negative_input_list)
+
 input_list.each do |input|
-  puts "Input: #{input.to_s.inspect} => #{calculator.add(input)}"
+  begin
+    result = calculator.add(input)
+    puts "Input: #{input.to_s.inspect} => #{result}"
+  rescue => e
+    puts "ERROR: Input: #{input.to_s.inspect} => #{e.message}"
+  end
   puts '--------------------------------'
 end
