@@ -18,6 +18,22 @@ Run all tests:
 bundle exec rspec
 ```
 
+## Running the main method
+
+Run the main method:
+
+```bash
+ruby string_calculator.rb
+```
+
+## Running all Tests with Code Coverage
+
+Run all tests with code coverage:
+
+```bash
+bundle exec rspec --require 'simplecov' --require 'simplecov-console' --format progress
+```
+
 ## Features
 
 The `StringCalculator` class provides an `add` method that:
