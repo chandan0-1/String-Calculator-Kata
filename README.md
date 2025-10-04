@@ -1,5 +1,8 @@
 # String-Calculator-Kata
 
+[![Ruby Tests](https://github.com/chandan/String-Calculator-Kata/workflows/Ruby%20Tests/badge.svg)](https://github.com/chandan/String-Calculator-Kata/actions)
+[![Coverage](https://codecov.io/gh/chandan/String-Calculator-Kata/branch/main/graph/badge.svg)](https://codecov.io/gh/chandan/String-Calculator-Kata)
+
 A Ruby implementation of the String Calculator kata with RSpec tests.
 
 ## Setup
@@ -25,6 +28,24 @@ open coverage/index.html
 ```
 
 **Current Coverage: 100.0% (74/74 lines covered)**
+
+## GitHub Actions
+
+This project uses GitHub Actions for continuous integration:
+
+- **Automatic Testing**: Tests run on every push and pull request
+- **Coverage Reports**: Coverage data uploaded as artifacts
+- **PR Comments**: Coverage percentage commented on pull requests
+- **Status Badges**: Real-time test status displayed in README
+
+### Local Testing
+
+Run tests locally:
+
+```bash
+# Using the test script
+./test.sh
+```
 
 ## Features
 
