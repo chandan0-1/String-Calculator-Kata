@@ -18,21 +18,19 @@ Run all tests:
 bundle exec rspec
 ```
 
-## Running the main method
-
-Run the main method:
-
-```bash
-ruby string_calculator.rb
-```
-
-## Running all Tests with Code Coverage
-
 Run all tests with code coverage:
 
 ```bash
-bundle exec rspec --require 'simplecov' --require 'simplecov-console' --format progress
+bundle exec rspec
 ```
+
+View detailed coverage report:
+
+```bash
+open coverage/index.html
+```
+
+**Current Coverage: 100.0% (74/74 lines covered)**
 
 ## Features
 
