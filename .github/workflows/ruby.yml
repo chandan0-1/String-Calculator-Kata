@@ -19,6 +19,9 @@ jobs:
         ruby-version: 2.6
         bundler-cache: true
 
+    - name: Add Linux platform to bundle
+      run: bundle lock --add-platform x86_64-linux
+
     - name: Run tests
       run: bundle exec rspec
 
