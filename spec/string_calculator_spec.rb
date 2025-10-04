@@ -10,10 +10,26 @@ RSpec.describe StringCalculator do
       end
     end
 
+    # with a single number input
     context 'with a single number input' do
       it 'returns the number itself after sum' do
         expect(calculator.add("1")).to eq(1)
         expect(calculator.add("5")).to eq(5)
+      end
+    end
+
+    # with multiple numbers input
+    context 'with multiple numbers' do
+      it 'returns the sum of all numbers' do
+        expect(calculator.add("1,2,3")).to eq(6)
+        expect(calculator.add("1,2,3,4,5")).to eq(15)
+      end
+    end
+
+    context 'with newline as delimiter' do
+      it 'handles newlines between numbers' do
+        expect(calculator.add("1\n2,3")).to eq(6)
+        expect(calculator.add("1\n2\n3")).to eq(6)
       end
     end
   end
