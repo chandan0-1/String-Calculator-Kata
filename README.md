@@ -34,8 +34,8 @@ open coverage/index.html
 This project uses GitHub Actions for continuous integration:
 
 - **Automatic Testing**: Tests run on every push and pull request
-- **Multiple Ruby Versions**: Tests run on Ruby 2.6+
-- **Coverage Reports**: Coverage data is uploaded to Codecov
+- **Coverage Reports**: Coverage data uploaded as artifacts
+- **PR Comments**: Coverage percentage commented on pull requests
 - **Status Badges**: Real-time test status displayed in README
 
 ### Local Testing
@@ -45,9 +45,6 @@ Run tests locally:
 ```bash
 # Using the test script
 ./test.sh
-
-# Or directly with RSpec
-bundle exec rspec
 ```
 
 ## Features
