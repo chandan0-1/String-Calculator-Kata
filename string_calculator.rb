@@ -50,6 +50,10 @@ class StringCalculator
     negative_numbers = number_array.select { |n| n < 0 }
     raise "negative numbers not allowed #{negative_numbers.join(", ")}" if negative_numbers.any?
 
+
+    # Filtering out the numbers greater than 1000
+    number_array = number_array.select { |n| n <= 1000 }
+
     # Summing the numbers and returning the total sum
     number_array.select { |n| n }.sum
   end
@@ -59,13 +63,14 @@ end
 # ------------------- Test Cases -------------------
 calculator = StringCalculator.new
 input_list = [
-  "",                # empty string
-  "1",               # single number
-  "1,2,3",           # multiple numbers
-  "1\n2,3",          # multiple numbers with newline
-  "1\n2\n3",         # multiple numbers with newline
-  "//;\n1;2",        # custom single-character delimiter
-  "//[*][%]\n1*2%3"  # custom multi-character delimiter
+  "",                 # empty string
+  "1",                # single number
+  "1,2,3",            # multiple numbers
+  "1\n2,3",           # multiple numbers with newline
+  "1\n2\n3",          # multiple numbers with newline
+  "//;\n1;2",         # custom single-character delimiter
+  "//[*][%]\n1*2%3",  # custom multi-character delimiter
+  "1,1001,2"          # numbers greater than 1000
 ]
 
 # Negative numbers
