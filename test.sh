@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "🧪 Running String Calculator Tests..."
-echo "=================================="
+echo "🧪 Running String Calculator Tests...."
+echo "==================================="
 
 # Run RSpec tests
 bundle exec rspec
